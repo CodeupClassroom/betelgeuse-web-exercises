@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form method="POST" action="https://request-inspector.glitch.me/">
+
+    <label for="username">Username</label>
+    <input id="username" name="username" type="text" value="Popeye" required>
+    <br>
+    <label for="password">Password</label>
+    <input id="password" name="password" type="password">
+    <br>
+
+    <button type="submit">Login</button>
+</form>
+
+<hr>
+
+<form action="https://request-inspector.glitch.me/" method="GET">
+    <label for="zipcode">Zipcode</label>
+    <input name="zipcode" type="text" id="zipcode" placeholder="please input the zipcode to search for properties">
+
+    <label for="property_type">Property Type:</label>
+    <select name="property_type" id="property_type">
+        <option value="condo">Condo</option>
+        <option value="duplex">Duplex</option>
+        <option value="rental">Rental</option>
+        <option value="single-family-detached">Single family, detached</option>
+    </select>
+
+    <button>Search Now!</button>
+</form>
+<hr>
+
+<a href="https://request-inspector.glitch.me?zipcode=78205&property_type=condo">Search for condos in ZIP Code 78205</a>
+
+<a href="https://www.youtube.com/results?search_query=javascript+the+good+parts">Search Youtube for JS the Good Parts Lectures</a>
+<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Intro to Higher Order Functions in Javascript</a>
+
+
+</body>
+</html>

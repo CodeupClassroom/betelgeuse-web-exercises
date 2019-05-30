@@ -3,9 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        div {
+            height: 200px;
+            width: 300px;
+            background-color: aquamarine;
+            border: 1px solid crimson;
+        }
+        main {
+            width: 800px;
+            background-color: bisque;
+        }
+        #middle {
+            border: 3px solid darkblue;
+        }
+    </style>
 </head>
 <body>
 
-<h1>Hello World!</h1>
+
+<main id="top">
+    <h1>Hello World!</h1>
+    <h2>We're authoring HTML</h2>
+    <p><a href="#bottom">Click here</a> to go to the bottom of the page.</p>
+    <p>To learn more about HTML, visit <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">Mozilla's HTML intro</a></p>
+
+    <a href="https://aphorisms.glitch.me" target="_blank">
+        <img src="img/owl.png" alt="directions for drawing an owl">
+    </a>
+
+    <p>Each paragraph tag is its own block</p>
+    <p>This text <span>is inside of a span</span></p>
+    <div>Text inside of a div</div>
+    <div id="middle">Text inside of a div</div>
+    <pre>Stuff
+               is awesome!</pre>
+    <div>Text inside of a div</div>
+    <hr>
+    <br>
+    <input type="text" name="username" placeholder="input your username">
+    <br>
+    <input type="date" name="password" placeholder="your password, please">
+    <br>
+    <button>Login</button>
+    <hr>
+    <h3>List examples</h3>
+    <dl>
+        <dt>HTML</dt>
+        <dd>Language for content and structure on the web.</dd>
+        <dt>CSS</dt>
+        <dd>How we write for styling and layout</dd>
+    </dl>
+    <p><a href="#top">Click here</a> to visit the top of the page.</p>
+
+
+
+
+    <footer id="bottom">
+        here is the footer
+    </footer>
+</main>
 </body>
 </html>
