@@ -1,14 +1,71 @@
 /*Color chosen by wife, can't say no.*/
 body {
     background-color: aquamarine;
+    background-image: url("../img/owl.png");
+    background-repeat: no-repeat;
 }
 h2 {
     color:darkslategrey;
+    text-align: end;
+}
+img {
+    text-align: center;
 }
 /*I like this shade of red more*/
 #red {
-    color: firebrick;
+    color: #890f0f;
 }
 .highlight {
-    background-color: greenyellow;
+    background-color: #EF0;
+    /*display: inline-block;*/
+}
+li.highlight {
+    background-color: rgb(152, 94, 153);
+    text-decoration: line-through solid red;
+}
+strong {
+    color: blue;
+}
+footer {
+    color: orange;
+}
+span {
+    color: blueviolet;
+}
+footer span strong {
+    color: inherit;
+}
+/* unvisited link (:link) */
+a:link {
+    color:red;
+}
+
+/* visited link (:visited) */
+a:visited {
+    color:black;
+}
+
+/* mouse hover over link (:hover) */
+a:hover {
+    color:blue;
+}
+
+/* active/selected link (:active) */
+a:active {
+    color:green;
+}
+li.highlight:hover {
+    background-color: rebeccapurple;
+    color: rgb(140, 197, 255);
+
+}
+p {
+    text-indent: 1em;
+    font-size: 22px;
+    font-family: 'American Typewriter', serif;
+    font-style: italic;
+    font-weight: bold;
+}
+ul {
+    list-style: square;
 }
