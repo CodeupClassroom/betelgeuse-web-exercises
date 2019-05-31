@@ -1,0 +1,14 @@
+/*Color chosen by wife, can't say no.*/
+body {
+    background-color: aquamarine;
+}
+h2 {
+    color:darkslategrey;
+}
+/*I like this shade of red more*/
+#red {
+    color: firebrick;
+}
+.highlight {
+    background-color: greenyellow;
+}
