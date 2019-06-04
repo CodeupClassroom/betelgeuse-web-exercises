@@ -1,5 +1,60 @@
 .fancy-header {
     color: purple; /* single line comment */
     text-decoration: underline;
-    font-style: italic;
+}
+
+h1.fancy-header {
+    text-align: center;
+}
+
+body {
+    background-color: aquamarine;
+    background-image: url("../img/pretty-bg.jpeg");
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+main {
+    background: rgba(126, 223, 247, .6);
+    font-family: "American Typewriter", serif;
+}
+
+table {
+    border: solid 5px palevioletred;
+}
+td {
+    font-size: 1.2em;
+    padding: 22px;
+    border: dotted 3px rebeccapurple;
+}
+
+th {
+    padding: 15px;
+    border: solid 2px firebrick;
+}
+
+ol {
+    list-style: lower-roman;
+}
+/* unvisited link (:link) */
+a:link {
+    color:red;
+}
+
+/* visited link (:visited) */
+a:visited {
+    color:black;
+}
+
+/* mouse hover over link (:hover) */
+a:hover {
+    color:blue;
+    background-color: #EEFF00;
+}
+
+/* active/selected link (:active) */
+a:active {
+    color:green;
+    background-color: hotpink;
 }
