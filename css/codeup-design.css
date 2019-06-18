@@ -1,0 +1,158 @@
+:root {
+    --red: #E6563b;
+    --orange: #EB9D3A;
+    --green: #7CB06C;
+    --blue: #00ABA9;
+    --light-grey: #F0F0F0;
+    --grey: #E6E6E6;
+
+    --separator-color: #DDD;
+}
+
+.cd-header {
+    font-family: 'Anton', sans-serif;
+}
+h1.cd-header {
+    font-size: 64px;
+}
+h2.cd-header {
+    font-size: 48px;
+}
+h3.cd-header {
+    font-size: 40px;
+}
+h4.cd-header {
+    font-size: 32px;
+}
+h5.cd-header {
+    font-size: 28px;
+}
+h6.cd-header {
+    font-size: 22px;
+}
+.bg-cd {
+    background: var(--light-grey);
+}
+.cd-body {
+    font-family: 'Abel', sans-serif;
+    font-size: .95em;
+}
+.circle {
+    box-sizing: border-box;
+    height: 105px;
+    width: 105px;
+    border-radius: 50%;
+    border: solid white 4px;
+    position: relative;
+}
+.c1 {
+    background: var(--red);
+}
+.c2 {
+    background: var(--orange);
+}
+.c3 {
+    background: var(--green);
+}
+.c4 {
+    background: var(--blue);
+}
+.circle-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Anton", sans-serif;
+    font-size: 20px;
+
+}
+.cd-img-main {
+    box-sizing: border-box;
+    border: solid var(--grey) 15px;
+    border-radius: 10px;
+    height: auto;
+    max-height: 243px;
+    width: 100%;
+    min-width: 55px;
+    object-fit: cover;
+}
+
+.circle-badge {
+    box-sizing: border-box;
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    position: relative;
+    display: inline-block;
+}
+.badge-text {
+    font-size: 10px;
+}
+.cd-side-img {
+    border: solid var(--grey) 5px;
+    border-radius: 3px;
+    box-sizing: border-box;
+    height: 100%;
+    min-height: 55px;
+    width: auto;
+    max-width: 55px;
+    object-fit: cover;
+}
+.cd-side-text {
+    line-height: 27px;
+}
+.square {
+    position: relative;
+    width: 55px;
+    height: 55px;
+    overflow: hidden;
+}
+.i-twitter {
+    color: rgb(73	161	236);
+    font-size: 1.25em;
+}
+.cd-logo {
+    object-fit: cover;
+    width: 105px;
+    height: 105px;
+    border-radius: 50%;
+}
+.cd-a-font {
+    font-family: "Abel", sans-serif;
+    color: #000;
+    text-decoration: none;
+}
+a.cd-a-font:hover {
+    text-decoration: none;
+    color: #000;
+}
+.cd-logo-text {
+    font-size: 2.5em;
+    position: relative;
+    top: 5px;
+}
+.cd-nav-links {
+    font-size: 1.55em;
+    position: relative;
+    top: -22px;
+}
+.bg-lgrey {
+    background: var(--light-grey);
+}
+.cd-nav {
+    height: 65px;
+    width: 100%;
+    background: #FFF;
+    position: absolute;
+    top: 28px;
+}
+.cd-border {
+    border-bottom: solid var(--grey) 3px;
+
+}
+
+@media screen and (max-width: 992px) {
+    .cd-logo-text {
+        top: -8px;
+    }
+}
