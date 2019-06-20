@@ -29,7 +29,7 @@
 
     // POP QUIZ: What the return of the function above?!
 
-    // logTheCheeses();
+    logTheCheeses();
 
     // By using the push method I can add to the end of my array.
 
@@ -37,7 +37,7 @@
 
     cheeses.unshift("Gouda");
 
-    // logTheCheeses();
+    logTheCheeses();
 
     // The unshift method will allow me to add to the front of my array.
 
@@ -50,7 +50,7 @@
     cheeses.push("Colby Jack", "White Cheddar", "Havarti");
     cheeses.unshift("Red Windsor", "Ragstone", "Nut Rebel");
 
-    // logTheCheeses();
+    logTheCheeses();
 
     /**
      * Audience: "But David, just as you have showed us that we can create, can we not also
@@ -63,7 +63,7 @@
 
     cheeses.shift();
 
-    // logTheCheeses();
+    logTheCheeses();
 
     // Unlike unshift, shift will remove the first element of an array.
 
@@ -71,7 +71,7 @@
 
     cheeses.pop();
 
-    // logTheCheeses();
+    logTheCheeses();
 
     // Pop will lop off the last element of an array.
 
@@ -79,7 +79,7 @@
 
     var removedCheese = cheeses.shift();
 
-    // console.log(removedCheese + " has been removed from cheeses array.");
+    console.log(removedCheese + " has been removed from cheeses array.");
 
     // It's important to note that the return from the pop and shift methods is the item being removed from the array.
 
@@ -87,7 +87,7 @@
 
     cheeses.push(removedCheese);
 
-    // logTheCheeses();
+    logTheCheeses();
 
     /**
      * Audience: "Golly David, there must be a way for me to locate an index of an element in an
@@ -96,11 +96,11 @@
 
     // Remember how with strings we were able to find the index of a pattern of characters?
 
-    // console.log(removedCheese.indexOf("o"));
+    console.log(removedCheese.indexOf("o"));
 
     // We can also use indexOf on arrays!
 
-    // console.log(cheeses.indexOf("Kraft American Singles"));
+    console.log(cheeses.indexOf("Kraft American Singles"));
 
     // Now I can locate the index of an element even if I'm not looking at it!
 
@@ -108,8 +108,8 @@
 
     var myFavNumbers = [17,34,22,17,19,17];
 
-    // console.log(myFavNumbers.indexOf(17));
-    // console.log(myFavNumbers.lastIndexOf(17));
+    console.log(myFavNumbers.indexOf(17));
+    console.log(myFavNumbers.lastIndexOf(17));
 
     // We can now see where the last occurrence of a piece of data occurs.
 
@@ -126,11 +126,11 @@
     // By passing one argument, we start at the specified index and return an array to the end.
     var otherCheeses = cheeses.slice(7);
 
-    // logTheCheeses();
-    //
-    // console.log(myFavCheeses);
-    //
-    // console.log(otherCheeses);
+    logTheCheeses();
+
+    console.log(myFavCheeses);
+
+    console.log(otherCheeses);
 
     // Notice that using the slice method didn't remove the cheeses I liked from the cheeses array. By assigning the return from the slice method to a variable I was able to call on it value.
 
@@ -142,11 +142,11 @@
 
     reversedCheeses.reverse();
 
-    // logTheCheeses();
-    //
-    // reversedCheeses.forEach(function(cheese) {
-    //     console.log(cheese);
-    // });
+    logTheCheeses();
+
+    reversedCheeses.forEach(function(cheese) {
+        console.log(cheese);
+    });
 
     /**
      * Audience: "Hey David, that cheese array is a bit of a mess. Is there a way we can feng
@@ -164,11 +164,11 @@
 
     var names = csvNames.split(",");
 
-    // console.log(names);
+    console.log(names);
 
     csvNames = names.reverse().join(",");
 
-    // console.log(csvNames);
+    console.log(csvNames);
 
 
 
@@ -181,9 +181,9 @@
 
     var staff = alphaTeam.concat(goldTeam);
 
-    // console.log(alphaTeam);
-    // console.log(goldTeam);
-    // console.log(staff);
+    console.log(alphaTeam);
+    console.log(goldTeam);
+    console.log(staff);
 
     function removeAtIndex(array, index) {
         var arr1 = array.slice(0, index);
