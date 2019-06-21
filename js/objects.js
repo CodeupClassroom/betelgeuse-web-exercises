@@ -1,4 +1,4 @@
-// (function() {
+(function() {
     "use strict";
 
     /**
@@ -108,6 +108,43 @@
      * > console.log(books[0].author.lastName) // "Adams"
      */
 
+    var books = [
+        {
+            title: "Animal",
+            author: {
+                firstName: "George",
+                lastName: "Orwell"
+            }
+        },
+        {
+            title: "The Name of the Wind",
+            author: {
+                firstName: "Patrick",
+                lastName: "Rothfuss"
+            }
+        },
+        {
+            title: "Harry Potter and the Half Blood Prince",
+            author: {
+                firstName: "J.K.",
+                lastName: "Rowling"
+            }
+        },
+        {
+            title: "Art of War",
+            author: {
+                firstName: "Sun",
+                lastName: "Tzu"
+            }
+        },
+        {
+            title: "Clifford the Big Red Dog",
+            author: {
+                firstName: "Norman",
+                lastName: "Bridwell"
+            }
+        }
+    ];
     /**
      * TODO:
      * Loop through the books array and output the following information about
@@ -133,6 +170,7 @@
      *      ...
      */
 
+    books.forEach(showBookInfo);
     /**
      * Bonus:
      * - Create a function named `createBook` that accepts a title and author
@@ -146,4 +184,24 @@
      *   `showBookInfo` function.
      */
 
-// })();
+    function createBook(title, firstName, lastName){
+        var book = {};
+        book.title = title;
+        book.author = {};
+        book.author.firstName = firstName;
+        book.author.lastName = lastName;
+        return book;
+    }
+
+    books.push(createBook("How to Draw Manga","Katy","Coope"));
+    console.log(books);
+
+    function showBookInfo(book,i){
+        var output = "";
+        output += "Book # " + (i+1) + "\n";
+        output += "Title: " + book.title + "\n";
+        output += "Author: " + book.author.firstName + " " + book.author.lastName + "\n";
+        output += "---" + "\n";
+        console.log(output);
+    }
+})();
