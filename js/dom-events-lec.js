@@ -50,11 +50,21 @@
 
     // Notice I'm using a removeEventListener method, with this method, I am noting the event that I want to remove, and am passing the function that carries the changes done by the event as well. As before the final argument passed represents the capture of the event.
 
-    document.getElementById('little-text').addEventListener("click", function(){
-        this.innerHTML = "It is with much heart ache that I had to make this HTML. Originally I was attempting to change the HTML of the dot with an ID of 'jupiter' but I was having difficulty with the background-size property playing nice with me changing the background image. as such, I'm instead working this this example... <div id='special' class='circle'></div> As you can see we can add quite a bit of HTML.";
-        document.getElementById("special").addEventListener("mouseover", pikaEvent, false);
-    }, false);
+    // document.getElementById('little-text').addEventListener("click", function(){
+    //     document.getElementById("little-text").innerHTML = "It is with much heart ache that I had to make this HTML. Originally I was attempting to change the HTML of the dot with an ID of 'jupiter' but I was having difficulty with the background-size property playing nice with me changing the background image. as such, I'm instead working this this example... <div id='special' class='circle'></div> As you can see we can add quite a bit of HTML.";
+    //     document.getElementById("special").addEventListener("mouseover", pikaEvent, false);
+    // }, false);
 
     // Notice now that I can only use the mouseover and mouse out events on the circle once. However, I can get it to restart the event by clicking on the paragraph tag again.
+
+    // If I want to remove the click event and only have it happen once, I'll need to save the function to a variable and then add the event listener using the function definition.
+
+    var littleEvent = function(){
+        document.getElementById("little-text").innerHTML = "It is with much heart ache that I had to make this HTML. Originally I was attempting to change the HTML of the dot with an ID of 'jupiter' but I was having difficulty with the background-size property playing nice with me changing the background image. as such, I'm instead working this this example... <div id='special' class='circle'></div> As you can see we can add quite a bit of HTML.";
+        document.getElementById("special").addEventListener("mouseover", pikaEvent, false);
+        document.getElementById("little-text").removeEventListener("click", littleEvent, false);
+    };
+
+    document.getElementById("little-text").addEventListener("click", littleEvent, false);
 
 })();
