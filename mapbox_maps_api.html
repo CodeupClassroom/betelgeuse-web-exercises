@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mapbox Exercise</title>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
+    <style>
+        #map {
+            /* the width and height may be set to any size */
+            width: 90%;
+            height: 700px;
+        }
+    </style>
+
+</head>
+<body>
+<h1>Our Awesome Mapbox Map!</h1>
+
+<!-- The HTML element that serves as the Mapbox container -->
+<div id='map'></div>
+
+<!-- Mapbox JS -->
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+<script src="js/keys.js"></script>
+<!-- Mapbox Geocoder Util Methods -->
+<script src="js/mapbox-utils.js"></script>
+
+<script>
+    mapboxgl.accessToken = mapboxToken;
+    var sanAntonio;
+    geocode("San Antonio, TX", mapboxToken).then(function(SATX) {
+        var sanAntonio = SATX;
+        var mapOptions = {
+            container: 'map',
+            center: sanAntonio,
+            zoom: 20,
+            style: 'mapbox://styles/mapbox/streets-v9'
+        };
+        var ourMap = new mapboxgl.Map(mapOptions);
+        ourMap.setZoom(15);
+
+        var favoriteRestaurants = [
+            {name: "Original Blanco Cafe"},
+            {name: "Pinch Boil House"},
+            {name: "Texas de Brazil"},
+            {name: "Lulu's Bakery and Cafe"},
+            {name: "La Panaderia"},
+            {name: "Rainforest Cafe"}
+        ];
+
+        favoriteRestaurants.forEach(function (item) {
+            geocode(item.name+", San Antonio, TX", mapboxToken).then(function (coord) {
+                var popup1 = new mapboxgl.Popup({closeButton: true})
+                    .setHTML("<p>" + item.name + "</p>")
+                    .setLngLat(coord);
+                // .addTo(ourMap);
+                var marker1 = new mapboxgl.Marker({color: "orange"})
+                    .setLngLat(coord)
+                    .addTo(ourMap)
+                    .setPopup(popup1);
+
+            })
+        })
+    })
+
+
+    //
+    //     geocode("Original Blanco Cafe", mapboxToken).then(function(blancoCafe){
+    //         var popup1 = new mapboxgl.Popup({closeButton:true})
+    //             .setHTML("<p>Original Blanco Cafe</p>")
+    //             .setLngLat(blancoCafe)
+    //             // .addTo(ourMap);
+    //         var marker1 = new mapboxgl.Marker({color:"orange"})
+    //             .setLngLat(blancoCafe)
+    //             .addTo(ourMap)
+    //             .setPopup(popup1);
+    //
+    //     })
+    // });
+</script>
+</body>
+</html>
