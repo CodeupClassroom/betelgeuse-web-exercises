@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Exercises</title>
+</head>
+<body>
+
+    <div>
+        <h1 class="codeup">jQuery: An Introduction</h1>
+        <a id="codeup" href="https://en.wikipedia.org/wiki/Betelgeuse"><em>From Wikipedia</em></a>
+        <p id="betelgeuse">
+            Betelgeuse is generally the ninth-brightest star in the night sky and second-brightest in the constellation of Orion (after Rigel). It is a distinctly reddish, semiregular variable star whose apparent magnitude varies between +0.0 and +1.3, the widest range of any first-magnitude star. At near-infrared wavelengths, Betelgeuse is the brightest star in the night sky. It has the Bayer designation α Orionis, which is Latinised to Alpha Orionis and abbreviated Alpha Ori or α Ori.
+        </p>
+        <h1 class="codeup">Cheeses</h1>
+        <ul class="codeup">
+            <li id="best-cheese">Muenster</li>
+            <li id="third-best-cheese">Provolone</li>
+            <li>White Cheddar</li>
+            <li id="not-cheese">Kraft American Singles</li>
+        </ul>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script>
+    // alert($("#not-cheese").html());
+    // alert($("#best-cheese").html());
+    // $('.codeup').css('border', '1px solid #F00');
+    $("li").css("font-size", "20px");
+    $("h1, p, li").css("background-color", "#ef0");
+    // alert($("h1").html());
+
+</script>
+</body>
+</html>
