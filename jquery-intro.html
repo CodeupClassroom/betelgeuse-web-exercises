@@ -3,15 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        .big {
+            font-size:3em;
+        }
+        .bold {
+            font-weight: bolder;
+        }
+    </style>
 </head>
 <body>
 
-
+<header><h2 class="greeting">jQuery is Fun!</h2></header>
+    <p class="greeting">Hello World!</p>
+    <p id="codeup" style="color:blueviolet">Codeup Rocks!</p>
+    <p id="betelgeuse">Betelgeuse is the Best!</p>
 
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
     <script>
         $(document).ready(function() {
-            alert( 'The DOM has finished loading!' );
+            $("#codeup").html("<a href='http://codeup.com'>"+$("#codeup").html()+"</a>").addClass("big").addClass("bold")
         });
     </script>
 </body>
