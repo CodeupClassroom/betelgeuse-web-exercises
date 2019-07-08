@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery FAQ</title>
+    <style>
+        .invisible {
+            display: none;
+        }
+        .highlighter {
+            background: #ef0;
+        }
+        .blue-text {
+            color: #5299D3;
+        }
+    </style>
+</head>
+<body>
+
+<div id="newsletter-prompt">
+    <h1>Would you like to sign up for our newsletter?</h1>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum congue pretium. Donec vulputate
+        convallis aliquet. Donec ac erat nisl. Cras massa sapien, malesuada malesuada feugiat ut, faucibus eu diam.
+        Phasellus fringilla sapien vitae justo luctus, eu luctus ex tempus.
+    </p>
+    <input type="checkbox" id="sign-me-up"><label for="sign-me-up">Please Sign Me Up!</label>
+    <hr>
+</div>
+<!-- info from https://www.nationalgeographic.com/travel/destinations/north-america/united-states/fun-facts-national-parks/?user.testname=none -->
+
+<div id="alerter"></div>
+
+<dl>
+    <dt>Lorem Park</dt>
+    <dd>Something something, blah blah.</dd>
+
+    <dt>Ipsum Lake</dt>
+    <dd>.halb halb, gnihtemos gnihtemoS</dd>
+
+    <dt>Computer Park</dt>
+    <dd>Look at all those Gateways...</dd>
+
+    <dt>Boiler Plate</dt>
+    <dd>This might be a bit plain...</dd>
+
+    <dt>Schmear Geyser</dt>
+    <dd>Get your bagels, my dudes.</dd>
+
+    <dt>Dab On 'Em Cliff</dt>
+    <dd>Cam Newton's fault, probably.</dd>
+
+    <dt>Astrodome</dt>
+    <dd>Houston baseball park.</dd>
+
+    <dt>Texas Cyclone</dt>
+    <dd>Was a cool roller coaster.</dd>
+
+    <dt>My Aunt Pam's House</dt>
+    <dd>They have a pomeranian.</dd>
+
+    <dt>Jellystone National Park</dt>
+    <dd>Yogi lives there.</dd>
+</dl>
+
+<hr>
+
+<h3>Dingodile's Glacier Farm</h3>
+<ul>
+    <li>Cold</li>
+    <li>Quiet</li>
+    <li>Peaceful</li>
+    <li>Prairie dogs everywhere</li>
+</ul>
+
+<h3>Neo Cortex's Big Ol' Lake</h3>
+<ul>
+    <li>Very wet</li>
+    <li>Very big</li>
+    <li>Very deep</li>
+    <li>Very evil</li>
+</ul>
+
+<h3>Crash Bandicoot National Park</h3>
+<ul>
+    <li>Chaotic</li>
+    <li>Good???</li>
+    <li>Fun</li>
+    <li>Wild</li>
+</ul>
+
+<button id="styler">Click to change some things!</button>
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function() {
+        $('dd').addClass('invisible');
+
+        $('#alerter').hide();
+
+        $('dt').click(function () {
+            $(this)
+                .toggleClass('highlighter')
+                .next('dd').toggleClass('invisible');
+        });
+
+        $("#styler").click(function() {
+            $("ul").each(function() {
+                $(this).children().last().css("background-color", "palegoldenrod");
+            })
+        });
+
+        $("h3").click(function() {
+            $(this).next().css("font-weight", "bold");
+        });
+
+        $("li").click(function() {
+            $(this).parent().children().first().css("color", "dodgerblue");
+        })
+
+
+    })
+</script>
+</body>
+</html>

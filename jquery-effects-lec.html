@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Effects</title>
+    <link href="https://fonts.googleapis.com/css?family=Lekton" rel="stylesheet">
+    <style>
+
+        /*!*for use with .show() *!*/
+        /*#national-parks, #state-parks-texas {*/
+        /*display: none;*/
+        /*}*/
+
+        body {
+            background-color: #ffcf24;
+            color: navy;
+            font-family: 'Lekton', sans-serif;
+        }
+
+        .grandpa {
+            background-color: lightskyblue;
+            height: 8.85em;
+            width: 53.76em;
+            box-shadow: 4px 4px 9px black;
+        }
+
+        .dad {
+            background-color: dodgerblue;
+            display: inline-block;
+            height: 7.25em;
+        }
+
+        .son {
+            background-color: mediumblue;
+            display: inline-block;
+            height: 7.25em;
+            position: relative;
+            top: .75em;
+            left: .75em;
+        }
+
+        h1 {
+            position: relative;
+            display: inline-block;
+            background-color: navy;
+            margin: 0;
+            font-size: 6em;
+            top: .125em;
+            left: .125em;
+            padding: 10px 10px 12px 10px;
+            color: #ffcf24;
+        }
+
+        .circle {
+            border-radius: 50%;
+            box-shadow: 4px 4px 9px black;
+        }
+
+        .grandma {
+            height: 400px;
+            width: 400px;
+            background: url("img/sonic.png") navy;
+            background-size: cover;
+            position: absolute;
+            bottom: 12px;
+            right: 20px;
+        }
+
+        .daughter {
+            height: 120px;
+            width: 120px;
+            background: dodgerblue;
+            position: absolute;
+            bottom: 90px;
+            right: 420px;
+        }
+
+        .grand-daughter {
+            height: 70px;
+            width: 70px;
+            background: blue;
+            position: absolute;
+            bottom:-80px;
+            right: -50px;
+        }
+
+        .push {
+            position: relative;
+            top: 30px;
+        }
+
+    </style>
+</head>
+<body>
+<div class="grandpa">
+    <div class="dad">
+        <div class="son">
+            <h1 id="header">Effects in jQuery</h1>
+        </div>
+    </div>
+
+    <div id="little-text" class="push">
+        <h3 id="national-parks-toggle">National Parks</h3>
+        <ul id="national-parks">
+            <li>Arches</li>
+            <li>Badlands</li>
+            <li>Carlsbad Caverns</li>
+            <li>Denali</li>
+            <li>Everglades</li>
+        </ul>
+        <h3 id="state-parks-texas-toggle">State Parks of Texas</h3>
+        <ul id="state-parks-texas">
+            <li>Abilene</li>
+            <li>Big Bend</li>
+            <li>Choke Canyon</li>
+            <li>Davis Mountains</li>
+            <li>Enchanted Rock</li>
+        </ul>
+    </div>
+
+    <div id="jupiter" class="circle grandma">
+        <div class="circle mom">
+            <div class="circle daughter">
+                <div class="circle grand-daughter"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="js/jquery-effects-lec.js"></script>
+</body>
+</html>
