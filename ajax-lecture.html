@@ -10,19 +10,15 @@
 </head>
 <body>
 
-<!-- !! What are three ways to make a GET request? !! -->
-
-<!--https://request-inspector.glitch.me/-->
-
 <main class="container mt-5">
     <h1 class="my-5">Intro to AJAX</h1>
-    <form method="POST" action="">
+    <form method="GET" action="https://hookb.in/1g6VgWJpW2CDmD2qxYR9">
         <div class="input-group">
             <input placeholder="Enter username" class="form-control" type="text" name="username">
         </div>
         <button class="btn btn-success my-2">Submit</button>
     </form>
-    <a href="">Some Link</a>
+    <a href="https://hookb.in/1g6VgWJpW2CDmD2qxYR9?username=jakeweary">Some Link</a>
 </main>
 
 <script
@@ -34,53 +30,58 @@
 
 <script>
 
-    $(document).ready(function() {
+    // $(document).ready(function() {
 
         "use strict";
 
         // simple request
 
-            // $.ajax('./data/orders.json'); // jQuery request object
+        // $.ajax('data/orders.json').done(function(data) {
+        //     console.log(data);
+        // });
 
-            // $.ajax("./data/orders.json").done(function(responseData){
-            //     console.log(responseData);
-            // });
+
+
+        // other functions
+        // doFancyStuffWithData()
 
             // DOESN'T WORK
             //     var responseData;
             //     $.ajax('./data/orders.json').done(function(data) {
             //         responseData = data;
             //     }); // .done()
-            //
-            //     console.log(responseData);
+
+                // console.log(responseData);
 
             // !! Why do you think this doesn't work? (to the class) !!
 
         // simple API request
 
-        // $.ajax("https://swapi.co/api/films").done(function(data){
-        //     console.log(data);
+        // $.ajax("https://swapi.co/api/people/1").done(function(data) {
+        //     console.log(data.name);
         // });
+
+
 
         // !! What other kinds of web APIs would be helpful? !!
 
         // single argument with .done(), .fail() and .always() methods
-
-            // $.ajax({
-            //     "url": "https://swapi.co/api/films",
-            //     "type": "GET",
-            //     "data": {
-            //         "search": "A New Hope"
-            //     }
-            // }).done(function(data, status, jqXhr) {
-            //     // console.log(status);
-            //     console.log(data);
-            //     console.log("The director of Star Wars: A New Hope is..." + data.results[0].director);
-            // }).fail(function(jqXhr, status, error) {
-            //     console.log("Request failed! " + status);
-            // }).always(function() {
-            //     console.log("Request made.");
-            // });
+        //
+        //     $.ajax({
+        //         "url": "https://swapi.co/api/films",
+        //         "type": "GET",
+        //         "data": {
+        //             "search": "A New Hope"
+        //         }
+        //     }).done(function(data, status, jqXhr) {
+        //         // console.log(status);
+        //         console.log(data);
+        //         console.log("The director of Star Wars: A New Hope is..." + data.results[0].director);
+        //     }).fail(function(jqXhr, status, error) {
+        //         console.log("Request failed! " + status);
+        //     }).always(function() {
+        //         console.log("Request made.");
+        //     });
 
 
         // Url first argument and configuration object second argument
@@ -96,19 +97,19 @@
 
 
         // Storing returned jQuery XML HTTP Response object
-
-            // var jqXhr = $.ajax("https://swapi.co/api/films", {
-            //     "type": "GET",
-            //     "data": {
-            //         "search": "A New Hope"
-            //     }
-            // });
-            //
-            // console.log(jqXhr);
-            //
-            // jqXhr.done(function(data) {
-            //     console.log("The director of Star Wars: A New Hope is..." + data.results[0].director);
-            // });
+        //
+        //     var jqXhr = $.ajax("https://swapi.co/api/films", {
+        //         "type": "GET",
+        //         "data": {
+        //             "search": "A New Hope"
+        //         }
+        //     });
+        //
+        //     console.log(jqXhr);
+        //
+        //     jqXhr.done(function(data) {
+        //         console.log("The director of Star Wars: A New Hope is..." + data.results[0].director);
+        //     });
 
 
         // GET short-hand method (also a $.post method)
@@ -121,16 +122,14 @@
             //     console.log("The director of Star Wars: A New Hope is..." + data.results[0].director);
             // });
 
-        // $.post('https://request-inspector.glitch.me/', {
-        //     data: {
-        //         username: "Fred",
-        //         password: "pass123"
-        //     }
-        // }).done(function(data) {
-        //     console.log(data);
-        // });
+            $.post('https://hookb.in/qB3VddOmj6irBrJjaxex', {
+                username: "Fred",
+                password: "pass123"
+            }).done(function(data) {
+                console.log(data);
+            });
 
-    });
+    // });
 
 </script>
 

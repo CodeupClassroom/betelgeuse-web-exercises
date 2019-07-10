@@ -2,8 +2,6 @@
 <html>
 <head>
     <title>Orders</title>
-    <link rel="shortcut icon" href="about:blank">
-
     <style>
 
         section {
@@ -51,20 +49,57 @@
         function updatePage() {
             // !! store jQuery request object to orders file in variable !!
 
-            // !! if a request is successful, log the data and pass the data into a call to buildHTML() !!
+            var request = $.ajax('./data/orders.json');
 
+            // !! if a request is successful, log the data and
+            // !! pass the data into a call to buildHTML() !!
             // !! if the request fails, log the jqXhr, status, and error
 
+            request.done(function(data) {
+                var html = buildHTML(data);
+                // update the document
+                // !! How can the HTML be added to the DOM? !!
+                $('#orders').html(html);
+
+            }).fail(function(jqXhr, status, error) {
+                console.log("Something went wrong");
+                console.log(status);
+            });
+
+
         }
+
+        // used to first populate the page on page load
+        updatePage();
 
         function buildHTML(orders) {
 
             var ordersHTML = "";
 
+            // !! How can we console log just "Silly Shirt" !!
+            // console.log(orders[1].itemOrdered);
+
+            // !! How can an h1 tag be made with "Silly Shirt" text !!
+            // ordersHTML = '<h1>' + orders[1].itemOrdered + '</h1>';
+
+
             // !! What JS method can be used to build HTML for all orders? !!
 
-            // !! How can the HTML be added to the DOM? !!
+            orders.forEach(function(order) {
 
+                ordersHTML += '<section>';
+                ordersHTML += '<h3>Order #' + order.orderNumber + '</h3>';
+                ordersHTML += '<dl>';
+                ordersHTML += '<dt>Item Ordered</dt>';
+                ordersHTML += '<dd>' + order.itemOrdered + '</dd>';
+                ordersHTML += '<dt>Ordered by</dt>';
+                ordersHTML += '<dd>' + order.orderedBy + '</dd>';
+                ordersHTML += '</dl>';
+                ordersHTML += '</section>';
+
+            });
+
+            return ordersHTML;
 
         }
 
