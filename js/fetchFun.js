@@ -16,12 +16,10 @@
 
     // .then(response => console.log(response.value))
 
-// fetch('https://api.github.com/users')
-//     .then(response => {
-//         console.log(response);
-//         return response.json()
-//     })
-//     .then(jsonified => console.log(jsonified))
+fetch('https://api.github.com/users',
+    {headers: {'Authorization': 'token '+githubToken}})
+    .then(response => response.json())
+    .then(users => console.log(users))
     // .then(usersArray => {
     //     for (let user of usersArray) {
     //         console.log(user.html_url);
